@@ -1,0 +1,2 @@
+Para evitar que otros piratas encuentren los tesoros enterrados, los piratas suelen dividir sus tesoros en dos partes. Implementar el predicado `dividirTesoro/3` que relaciona un pirata con dos listas con sus tesoros, de modo que la unión de esas listas sea la totalidad del tesoro y que ninguna de las listas sea vacía. Aviso... **¡no debe restringirse el orden de los tesoros!**
+Resolverlo sin usar el símbolo **“\=”**. 

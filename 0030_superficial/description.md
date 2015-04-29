@@ -1,0 +1,1 @@
+Implementar el predicado `superficial/1` que dice si alguien no enterró nada.

@@ -1,0 +1,1 @@
+`sonPateticosQuienesEnterraron/1` : Saber si, dado un elemento, todos los que enterraron ese elemento son patéticos. Un pirata es patético si es nauseoso y no peligroso; un perro es patético si no enterró un hueso; “Old Mac Donald” siempre es patético. El resto nunca es patético.

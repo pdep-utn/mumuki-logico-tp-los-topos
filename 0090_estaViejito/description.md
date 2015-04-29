@@ -1,0 +1,1 @@
+Implementar `estaViejito/1` que se cumple para los perros de siete años o más.

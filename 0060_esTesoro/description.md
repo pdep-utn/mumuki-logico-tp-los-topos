@@ -1,0 +1,1 @@
+`esTesoro/1` : Saber si algo es un tesoro (si lo enterró un pirata).

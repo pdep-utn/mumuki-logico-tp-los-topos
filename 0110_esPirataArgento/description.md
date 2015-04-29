@@ -1,0 +1,1 @@
+Implementar `esPirataArgento/1` que da verdadero para los piratas cuyo primer mar navegado es Mar Del Plata.

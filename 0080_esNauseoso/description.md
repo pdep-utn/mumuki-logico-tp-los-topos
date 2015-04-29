@@ -1,0 +1,1 @@
+`esNauseoso/1` : Los piratas que no navegan por ningún mar son nauseosos. Saber quiénes son los nauseosos.

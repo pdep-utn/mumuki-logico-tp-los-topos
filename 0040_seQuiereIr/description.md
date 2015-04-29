@@ -1,0 +1,1 @@
+Implementar `seQuiereIr/1` que indica si alguien se enterró a sí mismo.

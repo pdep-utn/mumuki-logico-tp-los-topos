@@ -1,0 +1,1 @@
+Implementar el predicado `granPirata/1` que obtiene una lista con todos los tesoros enterrados (recordar que algo es un tesoro si fue enterrado por un pirata, como lo establece el punto 5).

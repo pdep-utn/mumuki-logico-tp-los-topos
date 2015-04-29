@@ -1,0 +1,1 @@
+esRico/1 : Saber quién es rico (alguien es rico si entierra oro).

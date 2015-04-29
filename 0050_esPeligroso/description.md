@@ -1,0 +1,1 @@
+`esPeligroso/1` : Saber si alguien es peligroso (si entierra víctimas).

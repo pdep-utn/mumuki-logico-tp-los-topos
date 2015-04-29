@@ -1,0 +1,115 @@
+%%%%base de conocimientos%%%%
+
+entierra(juanCarlos, [originalidad]).
+entierra(oldMcDonald, [semillaDeLino, semillaDeGirasol]).
+entierra(ignacio, [televisor, computadora, fotosFamiliares, mocos, ignacio]).
+entierra(pobreton, []).
+entierra(turistaDeLaPlaya, [turistaDeLaPlaya]).
+entierra(pirata(barbaRoja, [atlantico, pacifico, indico, artico, antartico]),
+[joyas, oro]).
+entierra(pirata(jackSparrow, [marDelPlata, atlantico]),
+[oro, mapa]).
+entierra(pirata(piraton, []),
+[anilloDeCompromiso, relacionMatrimonial]).
+entierra(pirata(alCapone, []),
+[declaracionJurada, oro, dolares, armas,
+victimas, drogas]).
+entierra(perro(perroDinamita, ovejero, 3), [hueso]).
+entierra(perro(lassie, collie, 8), [victimas]).
+entierra(perro(pongo, dalmata, 4), [oro, joyas]).
+
+
+% 1)
+	sindromeDeDiogenes(Individuo):-
+	entierra(Individuo, Cosas),
+	length(Cosas, Cantidad),
+	Cantidad > 5.
+
+% 2)
+	enterro(Individuo, Cosa):-
+	entierra(Individuo, Cosas),
+	member(Cosa, Cosas).
+
+% 3)
+	superficial(Individuo):-
+	entierra(Individuo, []).
+
+% 4)
+	seQuiereIr(Individuo):-
+	enterro(Individuo, Individuo).
+
+% 5)
+	esPeligroso(Individuo):-
+	enterro(Individuo, victimas).
+
+% 6)
+	esTesoro(Cosa):-
+	pirata(Pirata),
+	entierra(Pirata, Cosas),
+	member(Cosa, Cosas).
+
+	pirata(pirata(Nombre,Mares)):-
+	entierra(pirata(Nombre,Mares),_).
+
+% 7)
+	esRico(Individuo):-
+	enterro(Individuo, oro).
+
+% 8)
+	esNauseoso(pirata(Nombre,[])):-
+	entierra(pirata(Nombre,[]),_).
+
+% 9)
+	estaViejito(Perro):-
+	entierra(Perro,_),
+	edad(Perro, Edad),
+	Edad >= 7.
+	
+	edad(perro(_,_,Edad),Edad).
+
+% 10)
+	perroIdeal(NombrePerro,NombrePersona):-
+	perro(Perro), nombre(Perro, NombrePerro),
+	persona(Persona), nombre(Persona, NombrePersona),
+	not(estaViejito(Perro)),
+	forall(enterro(Perro,Cosa), enterro(Persona,Cosa)).
+
+	nombre(perro(Nombre,_,_),Nombre).
+	nombre(pirata(Nombre,_),Nombre).
+	nombre(Nombre,Nombre):-
+	not(pirata(Nombre)),
+	not(perro(Nombre)).
+
+	perro(perro(Nombre,Raza,Edad)):-
+	entierra(perro(Nombre,Raza,Edad),_).
+
+	persona(Persona):-
+	entierra(Persona,_),
+	not(perro(Persona)).
+
+% 11)
+	esPirataArgento(pirata(Nombre, Mares)):-
+	entierra(pirata(Nombre, Mares),_),
+	nth1(1, Mares, marDelPlata).
+
+% 12)
+	granPirata(Tesoros):-
+	findall(Tesoro, esTesoro(Tesoro),Tesoros).
+
+% 13)
+	dividirTesoro(Pirata, Tesoros1, Tesoros2):-
+	pirata(Pirata),
+	entierra(Pirata, Tesoros),
+	dividir(Tesoros, Tesoros1, Tesoros2),
+	noVacio(Tesoros1),
+	noVacio(Tesoros2).
+
+	noVacio([_|_]).
+
+	dividir([],[],[]).
+	dividir(Tesoros, [UnTesoro | Tesoros1], Tesoros2):-
+	select(UnTesoro, Tesoros, Resto),
+	dividir(Resto, Tesoros1, Tesoros2).
+	dividir(Tesoros, Tesoros1, [UnTesoro | Tesoros2]):-
+	select(UnTesoro, Tesoros, Resto),
+	dividir(Resto, Tesoros1, Tesoros2).

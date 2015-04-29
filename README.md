@@ -1,0 +1,3 @@
+# TP Topos de Lógico para PdeP
+
+## [Enunciado](https://4924d24e-a-62cb3a1a-s-sites.googlegroups.com/site/paradigmasdeprogramacion/Cursos/cursadas-anteriores/2015/2015-man-sabado/PdeP%20SM%20-%20TP2%20L%C3%B3gico.pdf?attachauth=ANoY7coOS0s6M1pNykXKSeNllsWGDaeLc-gBbUL6njBc4JF_YzNtWOiBSxF0L_2TKXWZcma4SHhTAJWs_f7H46TX3IxlTXpDm8RfM2h_67NKW0sBTAkezhs9WgIVN8fAKH3gmAQB4JjTPLnJ15EoNcBlGGGK3AZcJLGjIphs48eDJ2kDTH1dMI2dGcR0hEXslSq_pXKx3Jw4MExEtpXHcZ27m1oa_0spKheVIz2Ab7XI-29WX1v9SQurFg77Rh6NeozvhCD9kZsQrI-25bT2SeWohO8WV2ZeIriN_jdXEt5Xp3o8bNx6TFXG5f9TlAFidZZH_2DlyqW6&attredirects=0)

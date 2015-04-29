@@ -1,0 +1,1 @@
+Implementar `perroIdeal/` que relaciona el nombre de un perro y el nombre de una persona (sea o no pirata, se pide sólo el nombre), cuando todo lo enterrado por el perro, también lo entierra la persona, siempre y cuando el perro no sea viejito.
